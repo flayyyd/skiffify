@@ -1,0 +1,244 @@
+/* Сброс стилей */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Основные стили */
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  background: #f4f4f4;
+  line-height: 1.6;
+}
+
+/* Контейнер */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Навигация */
+.navbar {
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.navbar .logo a {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #1e90ff;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  background-image: url('https://via.placeholder.com/1920x800.png?text=Фон+для+Hero');
+  background-size: cover;
+  background-position: center;
+  height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(30, 144, 255, 0.6);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+  animation: fadeIn 2s ease-out;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Секции */
+.section {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #1e90ff;
+  text-align: center;
+  position: relative;
+}
+
+.section h2::after {
+  content: "";
+  width: 80px;
+  height: 3px;
+  background: #1e90ff;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.section p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* Блочный контейнер секции с изображением и текстом */
+.section-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.section-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.section-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.section-image img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.section-image img:hover {
+  transform: scale(1.03);
+}
+
+/* Разворот секции с изображением справа */
+.section-container.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Контакты */
+.contact {
+  background: #f9f9f9;
+}
+
+.contact .container {
+  text-align: center;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+}
+
+.contact-item i {
+  color: #1e90ff;
+  font-size: 1.3rem;
+}
+
+/* Подвал */
+footer {
+  background: #1e90ff;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.95rem;
+}
+
+/* Адаптивная верстка */
+@media (max-width: 768px) {
+  .navbar .container {
+    flex-direction: column;
+  }
+  .nav-links {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  .nav-links li {
+    margin: 5px 0;
+  }
+  .hero {
+    height: 500px;
+  }
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+  .section-container {
+    flex-direction: column;
+  }
+}
