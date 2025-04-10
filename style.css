@@ -81,7 +81,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: black, url(https://business-online.su/img/articles/2019-05-14/pervaya.png);
+  background: black, url('https://business-online.su/img/articles/2019-05-14/pervaya.png');
 }
 
 .hero-content {
